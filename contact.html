@@ -7,7 +7,19 @@
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
 <link rel="stylesheet" href="style.css">
 </head>
+<script>
+const cards = document.querySelectorAll(".card-soft");
 
+window.addEventListener("scroll",()=>{
+cards.forEach(card=>{
+const top = card.getBoundingClientRect().top;
+
+if(top < window.innerHeight - 80){
+card.classList.add("show");
+}
+});
+});
+</script>
 <body>
 
 <header><h1>Contact Me</h1></header>
@@ -36,6 +48,9 @@
 
 <input type="hidden" name="_subject" value="Portfolio Contact">
 <input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
+
+<input type="hidden" name="_next" value="https://muhammadzeeshan779.github.io/zeeshan_portfolio/index.html">
 
 <div class="mb-3">
 <input name="name" class="form-control" placeholder="Name" required>
@@ -56,6 +71,24 @@
 </div>
 
 <footer>© 2026 Muhammad Zeeshan</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+const cards = document.querySelectorAll(".card-soft");
+
+window.addEventListener("scroll",()=>{
+cards.forEach(card=>{
+const top = card.getBoundingClientRect().top;
+
+if(top < window.innerHeight - 80){
+card.classList.add("show");
+}
+});
+});
+
+});
+</script>
 
 </body>
 </html>
